@@ -4,6 +4,12 @@ description: "Архитектура и дизайн интерьеров"
 theme: minima
 skin: dark   # включаем тёмную тему
 
+header_pages:
+  - index.md
+  - projects.md
+  - services.md
+  - about.md
+
 # ссылки в футере
 social_links:
   instagram: https://www.instagram.com/atm.arch/
