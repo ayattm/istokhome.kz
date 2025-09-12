@@ -1,0 +1,39 @@
+<nav class="site-nav">
+  <ul>
+    <li><a href="{{ '/' | relative_url }}">Главная</a></li>
+    <li>
+      <a href="{{ '/projects/' | relative_url }}">Проекты ▾</a>
+      <ul class="submenu">
+        <li><a href="{{ '/projects/houses/' | relative_url }}">Дома</a></li>
+        <li><a href="{{ '/projects/interiors/' | relative_url }}">Интерьеры</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ '/services/' | relative_url }}">Услуги</a></li>
+    <li><a href="{{ '/about/' | relative_url }}">О компании</a></li>
+  </ul>
+</nav>
+
+<style>
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.site-nav li { position: relative; margin-right: 20px; }
+.site-nav a { text-decoration: none; color: inherit; }
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 150px;
+}
+
+li:hover .submenu {
+  display: block;
+}
+
+.submenu li { margin: 0; }
+.submenu a { color: #fff; display: block; padding: 5px; }
+.submenu a:hover { background: #333; }
+</style>
