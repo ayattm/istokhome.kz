@@ -1,12 +1,12 @@
-title: "ISTOK HOME – Проектирование и дизайн интерьеров"
-author: "istokhome.kz"
-description: "Архитектeура | Дизайн интерьера | BIM"
+title: "ISTOK HOME"
+author: "ISTOK HOME"
+description: "Архитектура и дизайн интерьеров"
 theme: minima
+skin: dark   # включаем тёмную тему
 
 # ссылки в футере
 social_links:
-
-  instagram: instagram.com/atm.arch
+  instagram: https://www.instagram.com/atm.arch/
 
 # язык сайта
 lang: ru
