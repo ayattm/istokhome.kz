@@ -1,2 +1,2 @@
 # istokhome
-Проектирование и дизайн интерьеров
+Architecture and Interior design
