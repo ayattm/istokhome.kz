@@ -2,9 +2,7 @@ title: "ISTOK HOME"
 author: "ISTOK HOME"
 description: "Архитектура и дизайн интерьеров"
 theme: minima
-
-minima:
-  skin: dark
+skin: dark
 
 header_pages: []
 lang: ru
