@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISTOK HOME</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      flex-direction: column;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      color: #aaa;
-      margin: 0.5rem 0;
-    }
-    .contacts {
-      margin-top: 2rem;
-      font-size: 1rem;
-      color: #ccc;
-    }
-    .logo {
-      max-width: 120px;
-      margin-bottom: 20px;
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISTOK HOME</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Helvetica, Arial, sans-serif;
+background:#111;
+color:white;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+}
+
+.grid{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+background-size:80px 80px;
+z-index:-1;
+}
+
+.logo{
+font-size:42px;
+letter-spacing:8px;
+font-weight:300;
+}
+
+.subtitle{
+margin-top:10px;
+opacity:0.6;
+letter-spacing:3px;
+font-size:12px;
+}
+
+.contacts{
+margin-top:60px;
+font-size:14px;
+opacity:0.7;
+line-height:1.8;
+}
+
+.contacts a{
+color:white;
+text-decoration:none;
+border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+.contacts a:hover{
+opacity:1;
+}
+
+</style>
+
 </head>
+
 <body>
-  <div>
-    <img src="logo.png" alt="ISTOK HOME" class="logo">
-    <h1>ISTOK PRO</h1>
-    <h2>ARCHITECTURE & INTERIOR</h5>
-    <div class="contacts">
-      <p>info@istokhome.kz</p>
-    </div>
-  </div>
+
+<div class="grid"></div>
+
+<div class="logo">
+  <img src="logo.png" alt="ISTOK HOME" class="logo">
+ISTOK PRO
+</div>
+
+<div class="subtitle">
+ARCHITECTURE & INTERIOR
+</div>
+
+<div class="contacts">
+
+<p>
+info@istokhome.kz
+</p>
+
+<p>
++7 777 139 9977
+</p>
+
+</div>
+
 </body>
+
 </html>
