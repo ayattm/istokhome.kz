@@ -7,7 +7,7 @@
 <title>ISTOK HOME</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -66,6 +66,16 @@ opacity:0.7;
 line-height:1.8;
 }
 
+.contacts a{
+color:white;
+text-decoration:none;
+opacity:0.8;
+}
+
+.contacts a:hover{
+opacity:1;
+}
+
 .social{
 margin-top:25px;
 }
@@ -99,72 +109,7 @@ transition:0.3s;
 .button:hover{
 background:white;
 color:black;
-}
-
-.contacts a{
-color:white;
-text-decoration:none;
-opacity:0.8;
-}
-
-.contacts a:hover{
-opacity:1;
-}
-  
-.modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.85);
-display:none;
-align-items:center;
-justify-content:center;
-}
-
-.modal-content{
-background:#1a1a1a;
-padding:40px;
-width:90%;
-max-width:420px;
-text-align:left;
-}
-
-.modal-content h3{
-margin-top:0;
-font-weight:300;
-letter-spacing:2px;
-}
-
-.modal-content input,
-.modal-content textarea{
-width:100%;
-margin-top:12px;
-padding:12px;
-background:#111;
-border:1px solid rgba(255,255,255,0.2);
-color:white;
-font-family:'Montserrat', sans-serif;
-}
-
-.modal-content button{
-margin-top:20px;
-width:100%;
-padding:12px;
-border:none;
-background:white;
-color:black;
-cursor:pointer;
-font-family:'Montserrat', sans-serif;
-}
-
-.close{
-position:absolute;
-top:30px;
-right:40px;
-font-size:28px;
-cursor:pointer;
+transform:translateY(-2px);
 }
 
 footer{
@@ -186,7 +131,7 @@ letter-spacing:2px;
 <section class="hero">
 
 <div class="logo">
-<img src="/assets/img/logo.svg" alt="ISTOK HOME">
+<img src="assets/img/logo.svg" alt="ISTOK HOME">
 </div>
 
 <div class="subtitle">
@@ -215,60 +160,40 @@ info@istokhome.kz
 </div>
 
 <div class="social">
-<a href="https://instagram.com/istokhome"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://t.me/istokhome"><i class="fa-brands fa-telegram"></i></a>
-<a href="https://wa.me/+77771399977"><i class="fa-brands fa-whatsapp"></i></a>
+
+<a href="https://instagram.com/istokhome" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://t.me/istokhome" target="_blank">
+<i class="fa-brands fa-telegram"></i>
+</a>
+
+<a href="https://wa.me/+77771399977" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
 </div>
 
-<button class="button" onclick="openModal()">
+<button 
+class="button"
+data-tally-open="kdYBRM"
+data-tally-layout="modal"
+data-tally-width="420"
+data-tally-hide-title="1"
+data-tally-form-events-forwarding="1">
+
 ОБСУДИТЬ ПРОЕКТ
+
 </button>
 
 </section>
-
-<div class="modal" id="contactModal">
-
-<div class="close" onclick="closeModal()">×</div>
-
-<div class="modal-content">
-
-<h3>ОБСУДИТЬ ПРОЕКТ</h3>
-
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-
-<input type="hidden" name="_subject" value="Новая заявка с istokhome.kz">
-
-<input type="hidden" name="_next" value="https://istokhome.kz/thank-you.html">
-
-<input type="text" name="name" placeholder="Ваше имя" required>
-
-<input type="tel" name="phone" placeholder="Телефон" required>
-
-<textarea name="message" rows="4" placeholder="Кратко о проекте"></textarea>
-
-<button type="submit">Отправить</button>
-
-</form>
-
-</div>
-
-</div>
 
 <footer>
 © ISTOK HOME 2019–2026
 </footer>
 
-<script>
-
-function openModal(){
-document.getElementById("contactModal").style.display="flex";
-}
-
-function closeModal(){
-document.getElementById("contactModal").style.display="none";
-}
-
-</script>
+<script async src="https://tally.so/widgets/embed.js"></script>
 
 </body>
 </html>
