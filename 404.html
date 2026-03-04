@@ -3,60 +3,31 @@
 <head>
 
 <meta charset="UTF-8">
-<title>404 — ISTOK HOME</title>
-<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Страница не найдена</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
 margin:0;
-font-family: Montserrat, sans-serif;
+font-family:'Montserrat', sans-serif;
+font-weight:300;
 background:#111;
 color:white;
+text-align:center;
 height:100vh;
 display:flex;
+flex-direction:column;
 align-items:center;
 justify-content:center;
-overflow:hidden;
-}
-
-.container{
-text-align:center;
-position:relative;
-}
-
-h1{
-font-size:140px;
-font-weight:200;
-letter-spacing:10px;
-margin:0;
-}
-
-p{
-margin-top:10px;
-opacity:0.7;
-font-size:18px;
-}
-
-a{
-display:inline-block;
-margin-top:40px;
-padding:14px 30px;
-border:1px solid white;
-text-decoration:none;
-color:white;
-font-size:14px;
-letter-spacing:2px;
-transition:0.3s;
-}
-
-a:hover{
-background:white;
-color:black;
 }
 
 .grid{
-position:absolute;
+position:fixed;
 top:0;
 left:0;
 width:100%;
@@ -68,35 +39,63 @@ background-size:80px 80px;
 z-index:-1;
 }
 
-.line{
-position:absolute;
-height:1px;
-background:rgba(255,255,255,0.15);
-width:0;
-top:50%;
-left:0;
-animation:draw 3s forwards;
+.logo img{
+width:200px;
+max-width:80%;
 }
 
-@keyframes draw{
-to{
-width:100%;
-}
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 14px 32px;
-  background: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 16px;
-  transition: 0.3s;
+.title{
+margin-top:30px;
+font-size:40px;
+letter-spacing:6px;
+font-weight:200;
 }
 
-.cta-button:hover {
-  background: #000;
+.subtitle{
+margin-top:10px;
+opacity:0.6;
+font-size:14px;
+}
+
+.button{
+margin-top:40px;
+padding:14px 30px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+font-size:13px;
+letter-spacing:3px;
+transition:0.3s;
+}
+
+.button:hover{
+background:white;
+color:black;
+}
+
+.social{
+margin-top:30px;
+}
+
+.social a{
+color:white;
+font-size:20px;
+margin:0 12px;
+opacity:0.6;
+transition:0.3s;
+}
+
+.social a:hover{
+opacity:1;
+transform:translateY(-2px);
+}
+
+footer{
+position:fixed;
+bottom:20px;
+font-size:12px;
+opacity:0.4;
+letter-spacing:2px;
 }
 
 </style>
@@ -106,18 +105,32 @@ width:100%;
 <body>
 
 <div class="grid"></div>
-<div class="line"></div>
 
-<div class="container">
-
-<section class="error-page">
-  <h1>404</h1>
-  <p>Страница не найдена</p>
-
-  <a href="/" class="cta-button">Вернуться на главную</a>
-</section>
-
+<div class="logo">
+<img src="assets/img/logo.svg" alt="ISTOK HOME">
 </div>
+
+<div class="title">
+404
+</div>
+
+<div class="subtitle">
+Страница не найдена
+</div>
+
+<a href="/" class="button">
+НА ГЛАВНУЮ
+</a>
+
+<div class="social">
+<a href="https://instagram.com/istokhome"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://t.me/istokhome"><i class="fa-brands fa-telegram"></i></a>
+<a href="https://wa.me/77771399977"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<footer>
+© ISTOK HOME 2019–2026
+</footer>
 
 </body>
 </html>
