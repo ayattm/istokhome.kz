@@ -4,13 +4,17 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>ISTOK HOME</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family: Montserrat, sans-serif;
+font-family:'Montserrat', sans-serif;
+font-weight:300;
 background:#111;
 color:white;
 height:100vh;
@@ -34,34 +38,105 @@ background-size:80px 80px;
 z-index:-1;
 }
 
-.logo{
-font-size:42px;
-letter-spacing:8px;
+.logo img{
+width:200px;
+max-width:80%;
+}
+
+.subtitle h1{
+margin:20px 0 5px 0;
+font-weight:200;
+letter-spacing:4px;
+}
+
+.subtitle h4{
+margin:0;
+opacity:0.6;
 font-weight:300;
 }
 
-.subtitle{
-margin-top:10px;
-opacity:0.6;
-letter-spacing:3px;
-font-size:12px;
-}
-
 .contacts{
-margin-top:60px;
+margin-top:40px;
 font-size:14px;
 opacity:0.7;
 line-height:1.8;
 }
 
-.contacts a{
+.button{
+margin-top:40px;
+padding:14px 30px;
+border:1px solid white;
+background:transparent;
 color:white;
-text-decoration:none;
-border-bottom:1px solid rgba(255,255,255,0.3);
+cursor:pointer;
+font-size:13px;
+letter-spacing:3px;
+font-weight:300;
+transition:0.3s;
 }
 
-.contacts a:hover{
-opacity:1;
+.button:hover{
+background:white;
+color:black;
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.modal-content{
+background:#1a1a1a;
+padding:40px;
+width:90%;
+max-width:420px;
+text-align:left;
+}
+
+.modal-content h3{
+margin-top:0;
+font-weight:300;
+}
+
+.modal-content input,
+.modal-content textarea{
+width:100%;
+margin-top:12px;
+padding:12px;
+border:none;
+background:#111;
+color:white;
+border:1px solid rgba(255,255,255,0.2);
+font-family:'Montserrat', sans-serif;
+font-weight:300;
+}
+
+.modal-content button{
+margin-top:20px;
+width:100%;
+padding:12px;
+border:none;
+background:white;
+color:black;
+cursor:pointer;
+font-family:'Montserrat', sans-serif;
+}
+
+.close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:28px;
+cursor:pointer;
 }
 
 </style>
@@ -73,26 +148,63 @@ opacity:1;
 <div class="grid"></div>
 
 <div class="logo">
-  <img src="logo.png" alt="ISTOK HOME" class="logo">
-  </div>
-   
+<img src="assets/logo.png" alt="ISTOK HOME">
+</div>
+
 <div class="subtitle">
-  <h1>ISTOK HOME</h1>
-  <h4>Дизайн интерьера с реализацией под ключ</h4>
+<h1>ISTOK HOME</h1>
+<h4>Дизайн интерьера с реализацией под ключ</h4>
 </div>
 
 <div class="contacts">
 
-<p>
-info@istokhome.kz
-</p>
+<p>info@istokhome.kz</p>
 
-<p>
-+7 777 139 9977
-</p>
+<p>+7 777 139 9977</p>
+
+<p>Астана, Казахстан</p>
 
 </div>
 
-</body>
+<button class="button" onclick="openModal()">ОБСУДИТЬ ПРОЕКТ</button>
 
+<!-- ФОРМА -->
+
+<div class="modal" id="contactModal">
+
+<div class="close" onclick="closeModal()">×</div>
+
+<div class="modal-content">
+
+<h3>Обсудить проект</h3>
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+<input type="text" name="name" placeholder="Ваше имя" required>
+
+<input type="tel" name="phone" placeholder="Телефон" required>
+
+<textarea name="message" rows="4" placeholder="Кратко о проекте"></textarea>
+
+<button type="submit">Отправить</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+function openModal(){
+document.getElementById("contactModal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("contactModal").style.display="none";
+}
+
+</script>
+
+</body>
 </html>
